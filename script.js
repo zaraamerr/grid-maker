@@ -23,7 +23,20 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    let grid = document.getElementById('grid');  // Get the grid table reference
+    //if there are no rows, add one so that we can have a column, too
+    if (numRows === 0) {
+        addR();
+        return;
+    }
+    numCols++; // Increment the global variable numCols
+    // Loop through all existing rows in the grid
+    for (let i = 0; i < grid.rows.length; i++) {
+        let row = grid.rows[i];
+
+        // Insert a new cell at the end of each row
+        let cell = row.insertCell(row.cells.length);
+  }
 }
 
 // Remove a row
