@@ -74,14 +74,6 @@ function fillCell(event) {
 function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
-
-    // Set the color of the wheel input to the selected color
-    if (selectInput.value === "COLOR WHEEL"){
-        colorSelected = wheelInput.value;   
-    } else {
-        colorSelected = selectInput.value;
-        wheelInput.value = selectInput.value;
-    }
 }
 
 // Fill all uncolored cells
