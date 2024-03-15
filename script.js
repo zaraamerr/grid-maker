@@ -78,21 +78,27 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    let cells = document.getElementsByTagName("td");
+    let cells = document.querySelectorAll("td");
     // Loop through all cells and fill uncolored cells with the selected color
-    for (let i = 0; i < cells.length; i++) {
-        if (cells[i].style.backgroundColor === "") {
-            cells[i].style.backgroundColor = colorSelected;
+    cells.forEach(cell => {
+        if (cell.style.backgroundColor == ""){
+            cell.style.backgroundColor = colorSelected;
         }
-    }
+    })
 }
 
 // Fill all cells
 function fillAll(){
-
+    let cells = document.querySelectorAll("td");
+    cells.forEach(cell =>{
+        cell.style.backgroundColor = colorSelected;
+    })
 }
 
 // Clear all cells
 function clearAll(){
-
+    let cells = document.querySelectorAll("td");
+    cells.forEach(cell =>{
+        cell.style.backgroundColor = "";
+    })
 }
